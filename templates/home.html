@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<div class="container d-flex flex-column justify-content-center align-items-center vh-100 text-center">
+      <h1>Что главное в жизни?</h1>
+    <h1></h1>
+    <p> Вот зачем люди живут?<br>Кому-то действительно ...., наверное.<br>
+    Говорят, что есть люди, которые ........<br>
+    Ну, не знаю, может и есть такие, но для меня ......<br>
+    А может они просто пытаются ......? </p>
+    <!-- Добавляем ссылку на главную страницу -->
+    <a href="{{ url_for('home') }}" class="btn btn-primary">Вернуться на Главную страницу</a>
+  </div>
+{% endblock %}
