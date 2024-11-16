@@ -1,25 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Start with Bootstrap{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>{% block title %}My Website{% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
   </head>
   <body>
-    <header class="bg-light p-3">
+    <header class="bg-light p-2">
         <div class="container">
-            <h1 class="text-center">Крым</h1>
+            <h3 class="text-center">Крымский полуостров</h3>
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="{{ url_for('index') }}">ГЛАВНАЯ</a>
+                <a class="navbar-brand" href="{{ url_for('home') }}">ГЛАВНАЯ</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('about') }}">О Ней</a>
+                            <a class="nav-link" href="{{ url_for('about') }}">О ПРОЕКТЕ</a>
                         </li>
                     </ul>
                 </div>
@@ -27,8 +27,21 @@
         </div>
     </header>
     <main class="container my-4">
-        {% block content %}{% endblock %}
+        {% block content %}
+            # в это место будет пробрасываться не повторяющийся контент из home.html и about.html
+        {% endblock %}
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Футер -->
+    <footer class="bg-light text-center p-2">
+        <div class="container">
+            <p>Контактная информация: kdmghk@rambler.ru | Телефон: +7 (925) 012-34-56</p>
+            <p>
+                <a href="#">Facebook</a> |
+                <a href="#">Instagram</a> |
+                <a href="#">Twitter</a>
+            </p>
+        </div>
+    </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

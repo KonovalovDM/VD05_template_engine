@@ -1,35 +1,54 @@
 {% extends 'base.html' %}
 
-{% block title %}О Ней{% endblock %}
+{% block title %}О ПРОЕКТЕ{% endblock %}
 
 {% block content %}
-<div class="container d-flex flex-column justify-content-center align-items-center vh-100 text-center">
-      <h1>Жизнь!!!</h1>
-    <h1></h1>
-    <p> Вот зачем люди живут?<br>Кому-то действительно ...., наверное.<br>
-    Говорят, что есть люди, которые ........<br>
-    Ну, не знаю, может и есть такие, но для меня ......<br>
-    А может они просто пытаются ......? </p>
-    <p>
-        Дар напрасный, дар случайный…
-Дар напрасный, дар случайный,
-Жизнь, зачем ты мне дана?
-Иль зачем судьбою тайной
-Ты на казнь осуждена?
-Кто меня враждебной властью
-Из ничтожества воззвал,
-Душу мне наполнил страстью,
-Ум сомненьем взволновал?..
-Цели нет передо мною:
-Сердце пусто, празден ум,
-И томит меня тоскою
-Однозвучный жизни шум.
-1828 г.
 
+    <h3></h3>
+        <h6> Крым традиционно считается известным туристическим направлением. Здесь и традиционный пляжный отдых (и сервис с каждым годом становится все лучше).<br>
+        И знаменитые санатории, путевки в которые позволяют отдохнуть и оздоровиться. И активные туры с походами по горам Крыма.
+        И, конечно, поездка в Крым - это интереснейшие экскурсионные турпоездки, во время которых можно посмотреть все основные
+        достопримечательности полуострова: Керчь, Феодосию, Коктебель, Массандру, гора Ай-петри, Херсонес, Балаклаву, замок "Ласточкино гнездо",
+        Воронцовский дворец, Никитский ботанический сад и другие знаковые места Крыма. </h6>
 
-    </p>
+    <h3></h3>
 
-    <!-- Добавляем ссылку на главную страницу -->
+ <!-- Слайдер с фотографиями -->
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="active"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="active"></li>
+      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class="active"></li>
+      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" class="active"></li>
+  </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='images/crimea.jpg') }}" class="d-block w-100" alt="Фото 1">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/crimea_1.jpg') }}" class="d-block w-100" alt="Фото 2">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/crimea_2.jpg') }}" class="d-block w-100" alt="Фото 3">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/crimea_3.jpg') }}" class="d-block w-100" alt="Фото 4">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/crimea_4.jpg') }}" class="d-block w-100" alt="Фото 5">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+   <h3></h3>
     <a href="{{ url_for('home') }}" class="btn btn-primary">Вернуться на Главную страницу</a>
-  </div>
+</div>
 {% endblock %}

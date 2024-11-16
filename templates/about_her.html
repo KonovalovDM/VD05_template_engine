@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}О НЕЙ{% endblock %}
+
+{% block content %}
+<div class="container d-flex flex-column justify-content-center align-items-center vh-100 text-center">
+      <h1>Дар напрасный, дар случайный...</h1>
+    <h1></h1>
+    <p>
+        {% for i in poem}
+        {{i}}<br>
+        {% end poem%}
+    </p>
+
+
+    <!-- Добавляем ссылку на главную страницу -->
+    <a href="{{ url_for('home') }}" class="btn btn-primary">Вернуться на Главную страницу</a>
+  </div>
+{% endblock %}
