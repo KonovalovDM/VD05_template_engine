@@ -5,11 +5,14 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: DejaVu Sans Mono, monospace;
     font-size: 18px;
 }
 .content {
     text-align: justify;
+}
+.special-text {
+font-family: Brush Script Std, cursive;
 }
 
 header, footer {
@@ -17,6 +20,7 @@ header, footer {
     padding: 2px; /*Уменьшение отступов*/
     background-color: #f8f9fa;
     text-align: center;
+    font-family: Arial, sans-serif;
     font-size: 12px;
     line-height: 1.05;
     /*min-height: 50px;*/ /*устанавливаем минимальную высоту*/
